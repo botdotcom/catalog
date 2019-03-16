@@ -1,0 +1,78 @@
+body {
+	background-color: #e6e6e6; 
+}
+
+nav {
+	margin: 0;
+	width: 100%;
+	color: #330033;
+}
+
+a {
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul, 
+li {
+	list-style-type: none
+}
+
+ul {
+	padding-left: 0;
+}
+
+h3 {
+	margin-top: 0px;
+}
+
+.btn {
+	border-radius: 0px;
+}
+
+.card {
+  background: #e6e6e6;
+  border-radius: 2px;
+  min-height: 100px;
+  margin: 0 1rem 2rem 1rem;
+  box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.img-thumbnail {
+	margin-top: 1rem;
+}
+
+.name {
+	padding: 0;
+}
+
+.editdeletepane {
+	padding-bottom: 1rem;
+}
+
+.item-description {
+	padding: 0 1rem;
+}
+
+.item-info-card {
+	padding: 1rem;
+}
+
+.detail-card {
+	margin: 0;
+}
+
+.navbar-profile-image {
+	height: 20px;
+	width: 20px;
+	padding-bottom: 15px;
+}
+
+.navbar-brand {
+	text-transform: uppercase;
+	font-size: 2.5rem;
+}

@@ -1,0 +1,37 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "flash.html" %}
+<div class="row col-md-6 col-md-offset-3">
+	 <div class="card detail-card item-info-card">
+		<div class="row">
+			<div class="col-md-9">
+				<h2>{{item.name}}<br><small>({{ item.category.name }})</small></h2>
+			</div>			
+		</div>
+		<hr>
+		<div class="row item-description">			
+			{{ item.description }}			
+		    {% if item.user_id == session.user_id %}
+		    <div class="editdeletepane pull-right">
+		        <a href="{{ url_for('editCatalogItem', category_id=item.category_id, item_id=item.id) }}">
+		        	<button class="btn btn-default edit">						
+							Edit
+					</button>
+				</a>
+		        <a href="{{ url_for('deleteCatalogItem', category_id=item.category_id, item_id=item.id) }}">
+		        	<button class="btn btn-danger delete">						
+							Delete
+					</button>
+		        </a>
+		    </div>
+		    {% endif %}
+		</div>
+		{% if creator %}
+		<hr>
+		<div class="text-right">
+			Created By <b>{{ creator.email }} </b>
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}
